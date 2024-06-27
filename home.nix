@@ -3,45 +3,64 @@
 }: 
 
 {
-  home.stateVersion = "22.11";
-  home.username = "rtacconi";
+#  home.stateVersion = "24.05";
+  home.stateVersion = "24.05";
+  home.username = "riccardotacconi";
   home.homeDirectory = "/Users/riccardotacconi";
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
-    bazelisk
-    postgresql_15
+    qemu
+    fastfetch
+    wget
+    kubernetes-helm
+    crane
+    istioctl
+    jre8_headless
+    go
+    talosctl
+    freerdp
+    python311Full
+    python311Packages.ansible-core
+    python311Packages.boto3
+    python311Packages.botocore
+    python311Packages.pip
+    python311Packages.poetry-core
+    ansible-lint
+    neofetch
+    tenv
+    packer
+    vscode
+    tart
+    tmux
+    rio
     kind
     yq
-    ruby_3_1
     cachix
     gnumake
+    devenv
+    devbox
     cmake
-    (import (fetchTarball https://install.devenv.sh/latest)).default
     nmap
-    scala_2_12
-    spark
     rustup
     kubectl
     coreutils-full
     expect
-    vlang
     direnv
     jq
     htop
     bat
+    zstd
     httpie
     unixtools.watch
     sops
     iperf
     awscli2
     ack
-    actionlint
     tflint
     terraform-docs
     tree
     dbmate
-    leiningen
     shellcheck
   ];
 
@@ -61,7 +80,7 @@
       theme = "robbyrussell";
     };
     enableCompletion = true;
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
     defaultKeymap = "emacs";
     history.extended = true;
     initExtra = ''
@@ -84,7 +103,6 @@
   programs.git = {
     enable = true;
     userName = "rtacconi";
-    userEmail = "rtacconi@gmail.com";
+    userEmail = "riccardo.tacconi@crystalblockchain.com";
   };
-
 }

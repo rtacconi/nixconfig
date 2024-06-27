@@ -1,12 +1,14 @@
 source $HOME/.profile
 alias gst="git status";
 alias gco="git checkout";
+alias gc="git commit";
 alias gb="git branch";
 alias gp="git pull";
-alias gt="git rebase";
+alias gr="git rebase";
 alias k="kubectl";
 export EDITOR="nvim";
-PATH="$PATH:/usr/bin/local:$HOME/miniconda3/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin";
+export NIXPKGS_ALLOW_UNFREE=1
+PATH="$PATH:/usr/bin/local:$HOME/miniconda3/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$HOME/.rd/bin";
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
